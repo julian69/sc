@@ -1,0 +1,135 @@
+.site-footer{
+	background: $black;
+	width: 100%;
+    position: relative;
+    padding-bottom: 4em;
+    z-index: 9;
+
+    .sponsors{
+    	width: 100%;
+    	text-align: center;
+    	padding: 50px 0;
+    	background: #3C3C3C;
+
+    	li{
+    		display: inline-block;	
+    	   padding: 15px;
+
+    	    // &:last-child{
+    	    // 	padding: 0 15px;
+    	    // }
+
+    	    a{
+    	    	color: #fff;
+    	    	font-size: 1.5em;
+    	    }
+
+    	    img{
+    	    	max-width: 120px;
+    	    }
+    	}
+    }
+
+    .social{
+    	text-align: center;
+    	padding: 30px 0;
+
+    	.icon-circle{
+    		display: inline-block;
+		    margin-right: 5px;
+		    width: 35px;
+		    height: 35px;
+		    // border-radius: 50%;
+		    background: transparent;
+		    padding: 5px;
+
+		    &:last-child{
+		    	margin-right: 0;
+		    }
+
+    		&:hover{
+    			cursor: pointer;
+    		}
+
+    		svg{
+    			// max-width: 45px;
+    			
+    			path{
+    				fill: #fff;
+    			}
+
+				&:hover{
+	    			opacity: 0.7;
+				}
+    		}
+		}
+    }
+
+	.arrow {
+	    position: absolute;
+	    bottom: 0;
+	    height: 5em;
+	    padding: 15px;
+	    z-index: 1;
+	    width: 50px;
+	    left: 0;
+	    right: 0;
+	    text-align: center;
+	    margin: auto;
+
+	    a {
+		  display: inline-block;
+		  border-radius: 50%;
+
+		 	.top {
+			  display: inline-block;
+			  width: 3em;
+			  height: 3em;
+			  border: 2px  solid #fff;
+			  border-radius: 50%;
+			  margin-left: -13px;
+			}
+
+			.top:after {
+			  content: '';
+			  display: inline-block;
+			  margin-top: 1.2em;
+			  width: 1em;
+			  height: 1em;
+			  border-top: 2px solid #fff;
+			  border-right: 2px solid #fff;
+			  transform: rotate(-45deg);
+			}
+
+			&:hover .top{
+			  	opacity: 0.7;
+			}
+
+			&:hover .top:after{
+			 	opacity: 0.7;
+			}
+
+		}
+	}	
+
+	.wm{
+    	position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	text-align: right;
+    	padding-left: 15px;
+    	padding-bottom: 5px;
+		
+		img{
+			width: 25px;
+		}
+
+    	a{
+    		color: #fff;
+    	}
+    }
+
+    .tooltip.right .tooltip-inner {
+	    background-color:#E25A5A;
+	}
+}

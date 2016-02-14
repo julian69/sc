@@ -1,0 +1,31 @@
+<header id="site-header" class="wow fadeIn" data-wow-delay="1ms" data-wow-duration="1s">
+	
+	 <h1>
+	     <img src="assets/images/logo_header.png" alt="">
+	     <p>Sale Caravana</p> 
+     </h1>
+
+	<div class="button_container" id="toggle">
+	  <span class="top"></span>
+	  <span class="middle"></span>
+	  <span class="bottom"></span>
+	</div>
+
+	<div class="overlay" id="overlay">
+	  <nav class="overlay-menu">
+	    <ul>
+	      <li ><a href="#">Home</a></li>
+	      <li><a href="#">About</a></li>
+	      <li><a href="#">Work</a></li>
+	      <li><a href="#">Contact</a></li>
+	  
+	    </ul>
+	  </nav>
+	</div>
+
+
+</header>
+
+
+
+	
