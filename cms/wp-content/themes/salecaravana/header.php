@@ -24,36 +24,40 @@
 
 	</head>
 
-	<body>
+	<body <?php echo body_class(); ?> >
 		<!-- This variable fetches every page's custom fields in turn -->
 		<?php $GLOBALS['fields'] = get_fields(); ?>
+
+		<div id="header-bg"></div>
+
 		<header id="site-header" class="" data-wow-delay="1ms" data-wow-duration="1s">
-			
-			 <h1>
-			     <img src="assets/images/logo_header.png" alt="">
-			     <p>Sale Caravana</p> 
-		     </h1>
+
+			<h1>
+			 <img src="<?php echo bloginfo('template_url'); ?>/assets/images/logo_header.png" alt="Sale Caravana Logo">
+			 <p>Sale Caravana</p> 
+			</h1>
 
 			<div class="button_container" id="toggle">
-			  <span class="top"></span>
-			  <span class="middle"></span>
-			  <span class="bottom"></span>
+				<span class="top"></span>
+				<span class="middle"></span>
+				<span class="bottom"></span>
 			</div>
 
 			<div class="overlay" id="overlay">
-			  <nav class="overlay-menu">
+			<nav class="overlay-menu">
 
-			  		<?php 
-			  				wp_nav_menu( array(    	 
-					  		  'container'       => '',
-							  'container_class' => false,
-							  'container_id'    => false,
-							  'menu_class'      => false,
-							  'menu_id'         => false,
-							  'theme_location' => 'header-menu' ) );
-					  ?> 
-			  
-			  </nav>
+					<?php 
+							wp_nav_menu( array(    	 
+				  		  'container'       => '',
+						  'container_class' => false,
+						  'container_id'    => false,
+						  'menu_class'      => false,
+						  'menu_id'         => false,
+						  'theme_location' => 'header-menu' ) );
+				  ?> 
+				  <?php dynamic_sidebar('footer_widget'); ?>
+
+			</nav>
 			</div>
 
 		</header>

@@ -5,9 +5,9 @@ jQuery(document).ready( function($) {
 		e.preventDefault();
 		var catSlug = $(this).attr('data-token');
 		var data = {
-				action: 'test_response',
-	            post_var: catSlug
-			};
+			action: 'test_response',
+            post_var: catSlug
+		};
 
 		$.post(
 			the_ajax_script.ajaxurl, 

@@ -4,6 +4,7 @@
 */
 
     get_header();
+    // var_dump($fields); exit;
 ?>
 
 <main class="index-template">
@@ -51,7 +52,7 @@
         
 	        <div class="inner">
 	           <h4 class="wow fadeInUp col-md-12" data-wow-duration=".5s" data-wow-offset="10"><?php echo $fields['headline']; ?></h4>
-	              <img src="assets/images/logo_solo.png" alt="..." class="wow fadeInUp img-responsive" data-wow-duration=".5s" data-wow-offset="50"> 
+	              <img src="<?php echo bloginfo('template_url'); ?>/assets/images/logo_solo.png" alt="..." class="wow fadeInUp img-responsive" data-wow-duration=".5s" data-wow-offset="50"> 
 	        </div>
 
         </div>
@@ -114,7 +115,7 @@
         <?php foreach ($fields['redirections'] as $key): ?>
          
             <div class="col-sxs-12 col-md-4">
-             <a href="<?php echo $key['link']; ?>"><img src="assets/images/mundo.svg" alt=""></a> 
+             <a href="<?php echo $key['link']; ?>"><img src="<?php echo bloginfo('template_url'); ?>/assets/images/mundo.svg" alt=""></a> 
                 <span class="col-md-12" ><?php echo $key['content']; ?></span>
             </div>
 

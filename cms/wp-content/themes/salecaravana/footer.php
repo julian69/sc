@@ -3,12 +3,13 @@
 			<div class="sponsors">
 				<div class="container">
 					<div class="row">
-					<?php //dynamic_sidebar('footer_widget'); ?>
+					
 						<ul>
-							<li><a href="#" targert="blank"><img src="assets/images/trewa.png" alt=""></a></li>
-							<li><a href="#" targert="blank"><img src="assets/images/trewa.png" alt=""></a></li>
-							<li><a href="#" targert="blank"><img src="assets/images/trewa.png" alt=""></a></li>
-							<li><a href="#" targert="blank"><img src="assets/images/trewa.png" alt=""></a></li>
+
+							<li><a href="#" targert="blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/images/trewa.png" alt="Trewa"></a></li>
+							<li><a href="#" targert="blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/images/trewa.png" alt="Trewa"></a></li>
+							<li><a href="#" targert="blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/images/trewa.png" alt="Trewa"></a></li>
+							<li><a href="#" targert="blank"><img src="<?php echo bloginfo('template_url'); ?>/assets/images/trewa.png" alt="Trewa"></a></li>
 						</ul>
 					</div>
 				</div>
@@ -33,7 +34,7 @@
 										</g>
 									</g>
 
-									</svg>
+								</svg>
 							</a>
 			    	 	</li>
 
@@ -145,7 +146,5 @@
 			      </a>
 		    </div> -->
 		</footer>
-
-
 	</body>
 </html>

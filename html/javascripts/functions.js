@@ -120,28 +120,30 @@ var common = {
 			    $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 1000);
 			});
 
+			var home_header_bg = $('.home #header-bg');
+			
 			$(function(){
-			    $('#site-header').data('size','big');
+			    home_header_bg.data('size','big');
 			});
 
 			$(window).scroll(function(){
 			 
 			    if($(document).scrollTop() > 0)
 			    {
-			        if($('#site-header').data('size') == 'big')
+			        if(home_header_bg.data('size') == 'big')
 			        {
-			            $('#site-header').data('size','small');
-			            $('#site-header').stop().animate({
+			            home_header_bg.data('size','small');
+			            home_header_bg.stop().animate({
 			                height:'100px'
 			            },300);
 			        }
 			    }
 			    else
 			    {
-			        if($('#site-header').data('size') == 'small')
+			        if(home_header_bg.data('size') == 'small')
 			        {
-			            $('#site-header').data('size','big');
-			            $('#site-header').stop().animate({
+			            home_header_bg.data('size','big');
+			            home_header_bg.stop().animate({
 			                height:'0'
 			            },300);
 			        }  

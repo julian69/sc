@@ -3,7 +3,7 @@
           <div class="row">
 			
 			<?php
-
+      
 				// Posts Types
 				$args = array(
 					"post_type"	=> "entries",

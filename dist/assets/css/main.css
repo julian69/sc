@@ -6842,16 +6842,21 @@ body {
 Header
 
 -------------------------------------------------------------- */
-#site-header {
+#header-bg {
+  background: #131212;
+  height: 100px; }
+
+.home #header-bg {
+  height: 0; }
+
+#site-header, #header-bg {
   position: fixed;
   top: 0;
   left: 0;
-  background: #131212;
   width: 100%;
-  height: 0;
   z-index: 10;
   text-align: center; }
-  #site-header h1 {
+  #site-header h1, #header-bg h1 {
     position: absolute;
     top: 15px;
     right: 0;
@@ -6860,18 +6865,18 @@ Header
     display: block;
     z-index: 100;
     color: #fff; }
-    #site-header h1 i {
+    #site-header h1 i, #header-bg h1 i {
       color: #fff;
       font-size: 40px; }
-    #site-header h1 p {
+    #site-header h1 p, #header-bg h1 p {
       font-size: 22px;
       font-weight: bold;
       text-transform: uppercase;
       font-family: "Open Sans", sans-serif;
       padding: 5px 0; }
-    #site-header h1 img {
+    #site-header h1 img, #header-bg h1 img {
       max-width: 50px; }
-  #site-header .button_container {
+  #site-header .button_container, #header-bg .button_container {
     position: absolute;
     top: 30px;
     right: 2%;
@@ -6880,20 +6885,20 @@ Header
     cursor: pointer;
     z-index: 100;
     transition: opacity .25s ease; }
-    #site-header .button_container:hover {
+    #site-header .button_container:hover, #header-bg .button_container:hover {
       opacity: .7; }
-    #site-header .button_container.active .top {
+    #site-header .button_container.active .top, #header-bg .button_container.active .top {
       -webkit-transform: translateY(11px) translateX(0) rotate(45deg);
               transform: translateY(11px) translateX(0) rotate(45deg);
       background: gray; }
-    #site-header .button_container.active .middle {
+    #site-header .button_container.active .middle, #header-bg .button_container.active .middle {
       opacity: 0;
       background: gray; }
-    #site-header .button_container.active .bottom {
+    #site-header .button_container.active .bottom, #header-bg .button_container.active .bottom {
       -webkit-transform: translateY(-11px) translateX(0) rotate(-45deg);
               transform: translateY(-11px) translateX(0) rotate(-45deg);
       background: gray; }
-    #site-header .button_container span {
+    #site-header .button_container span, #header-bg .button_container span {
       background: #fff;
       border: none;
       height: 5px;
@@ -6903,11 +6908,11 @@ Header
       left: 0;
       transition: all .35s ease;
       cursor: pointer; }
-      #site-header .button_container span:nth-of-type(2) {
+      #site-header .button_container span:nth-of-type(2), #header-bg .button_container span:nth-of-type(2) {
         top: 11px; }
-      #site-header .button_container span:nth-of-type(3) {
+      #site-header .button_container span:nth-of-type(3), #header-bg .button_container span:nth-of-type(3) {
         top: 22px; }
-  #site-header .overlay {
+  #site-header .overlay, #header-bg .overlay {
     z-index: 10;
     position: fixed;
     background: #fff;
@@ -6919,25 +6924,25 @@ Header
     visibility: hidden;
     transition: opacity .35s, visibility .35s, height .35s;
     overflow: hidden; }
-    #site-header .overlay.open {
+    #site-header .overlay.open, #header-bg .overlay.open {
       opacity: 1;
       visibility: visible;
       height: 100%; }
-      #site-header .overlay.open li {
+      #site-header .overlay.open li, #header-bg .overlay.open li {
         -webkit-animation: fadeInRight .5s ease forwards;
                 animation: fadeInRight .5s ease forwards;
         -webkit-animation-delay: .35s;
                 animation-delay: .35s; }
-        #site-header .overlay.open li:nth-of-type(2) {
+        #site-header .overlay.open li:nth-of-type(2), #header-bg .overlay.open li:nth-of-type(2) {
           -webkit-animation-delay: .4s;
                   animation-delay: .4s; }
-        #site-header .overlay.open li:nth-of-type(3) {
+        #site-header .overlay.open li:nth-of-type(3), #header-bg .overlay.open li:nth-of-type(3) {
           -webkit-animation-delay: .45s;
                   animation-delay: .45s; }
-        #site-header .overlay.open li:nth-of-type(4) {
+        #site-header .overlay.open li:nth-of-type(4), #header-bg .overlay.open li:nth-of-type(4) {
           -webkit-animation-delay: .50s;
                   animation-delay: .50s; }
-    #site-header .overlay nav {
+    #site-header .overlay nav, #header-bg .overlay nav {
       position: relative;
       height: 70%;
       top: 50%;
@@ -6947,28 +6952,28 @@ Header
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
       text-align: center; }
-    #site-header .overlay ul {
+    #site-header .overlay ul, #header-bg .overlay ul {
       list-style: none;
       padding: 0;
       margin: 0 auto;
       display: inline-block;
       position: relative;
       height: 100%; }
-      #site-header .overlay ul li {
+      #site-header .overlay ul li, #header-bg .overlay ul li {
         display: block;
         height: 25%;
         min-height: 100px;
         position: relative;
         opacity: 0; }
-        #site-header .overlay ul li a {
+        #site-header .overlay ul li a, #header-bg .overlay ul li a {
           display: block;
           position: relative;
           color: #000;
           text-decoration: none;
           overflow: hidden; }
-          #site-header .overlay ul li a:hover:after, #site-header .overlay ul li a:focus:after, #site-header .overlay ul li a:active:after {
+          #site-header .overlay ul li a:hover:after, #header-bg .overlay ul li a:hover:after, #site-header .overlay ul li a:focus:after, #header-bg .overlay ul li a:focus:after, #site-header .overlay ul li a:active:after, #header-bg .overlay ul li a:active:after {
             width: 100%; }
-          #site-header .overlay ul li a:after {
+          #site-header .overlay ul li a:after, #header-bg .overlay ul li a:after {
             content: '';
             position: absolute;
             bottom: 0;
