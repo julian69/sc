@@ -1,9 +1,10 @@
+  <div class='loader'><img class="pulse" src="<?php echo bloginfo('template_url'); ?>/assets/images/3.gif" alt="Sale Caravana Logo"></div>
 
    <section class="main-posts">
           <div class="row">
 			
 			<?php
-      
+        
 				// Posts Types
 				$args = array(
 					"post_type"	=> "entries",
@@ -20,7 +21,7 @@
 							$heading_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 						
 			?>
-                <div class="col-sm-4 col-md-4 post" >
+                <div class="col-xs-12 col-sm-6 col-md-4 post" >
                       <div class="thumbnail">
                         
                         	<?php if( $heading_url ): ?>

@@ -117,11 +117,13 @@ var common = {
 			
 			$('.anchor').on('click', function(event){     
 			    event.preventDefault();
-			    $('html,body').animate({scrollTop:$(this.hash).offset().top - 100}, 1000);
+			    $('html,body').animate({scrollTop:$(this.hash).offset().top - 150}, 1000);
 			});
 
 			var home_header_bg = $('.home #header-bg');
-			
+			var site_header = $('.home #site-header');
+			var logo_header = $('.home .logo_header');
+
 			$(function(){
 			    home_header_bg.data('size','big');
 			});
@@ -135,9 +137,11 @@ var common = {
 			            home_header_bg.data('size','small');
 			            home_header_bg.stop().animate({
 			                height:'100px'
-			            },300);
+			            },300).css('border-bottom', '2px solid #000');
+			            site_header.toggleClass('header-open');
+			            logo_header.toggleClass('hide');
 			        }
-			    }
+				}
 			    else
 			    {
 			        if(home_header_bg.data('size') == 'small')
@@ -145,9 +149,11 @@ var common = {
 			            home_header_bg.data('size','big');
 			            home_header_bg.stop().animate({
 			                height:'0'
-			            },300);
+			            },300).css('border-bottom', 'none');
+			            site_header.toggleClass('header-open');
+			            logo_header.toggleClass('hide');	
 			        }  
-			    }
+				}
 			});
 	},
 
@@ -178,8 +184,7 @@ var common = {
 
 		var items = $('.thumbnail');
 		
-		items.on('click', function(e){
-			
+		$(document).on('click','.thumbnail', function(e){
 			// e.preventDefault();
 			var overlay = $(this).find('.box-overlay');
 
@@ -196,6 +201,19 @@ var common = {
 		    }
 
 		});
+
+		$(document).on('click', function (event) {
+ 
+		    var clickover = $(event.target);
+		    var $navbar = $(".navbar-collapse");               
+		    var _opened = $navbar.hasClass("in");
+
+		    if ( _opened === true && !clickover.hasClass("navbar-toggle")  ) {      
+		        $navbar.collapse('hide');
+		        console.log($(this));
+		    }
+		});
+
 	},
 
 	init : function() 
@@ -212,7 +230,6 @@ var common = {
         common.init();
     });
 }
-
 
 
 

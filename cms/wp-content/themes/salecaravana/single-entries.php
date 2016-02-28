@@ -1,8 +1,9 @@
-<?php 
-	get_header();
-?>
+<div class='loader'><img class="pulse" src="<?php echo bloginfo('template_url'); ?>/assets/images/3.gif" alt="Sale Caravana Logo"></div>
 
-<main class="single-entries-template">
+
+
+
+<section class="single-entries-template">
 
 <?php
 
@@ -35,8 +36,5 @@
         		endwhile; 
 		endif; 
 ?>
-</main>
+</section>
 
-<?php 
-	get_footer();
-?>

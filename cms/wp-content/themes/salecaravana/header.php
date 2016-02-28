@@ -24,18 +24,53 @@
 
 	</head>
 
-	<body <?php echo body_class(); ?> >
+	<body <?php echo body_class(); ?> id="here">
 		<!-- This variable fetches every page's custom fields in turn -->
-		<?php $GLOBALS['fields'] = get_fields(); ?>
+		<?php 
+			$GLOBALS['fields'] = get_fields(); 
+			// global $polylang;
+			// global $post_button;
+
+			// if($polylang->curlang->slug == 'en') {
+			//    $post_button = 'VIEW MORE';
+			// }else{
+			//    	$post_button = 'VER MAS';
+			// }
+
+		?>
 
 		<div id="header-bg"></div>
 
-		<header id="site-header" class="" data-wow-delay="1ms" data-wow-duration="1s">
+		<header id="site-header" data-wow-delay="1ms" data-wow-duration="1s">
 
-			<h1>
-			 <img src="<?php echo bloginfo('template_url'); ?>/assets/images/logo_header.png" alt="Sale Caravana Logo">
-			 <p>Sale Caravana</p> 
-			</h1>
+			<?php
+
+		      	$current_page = $post->post_title;
+
+		      	if ($current_page == 'Home'){  
+            ?>
+				<a class="a_h" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<h1>
+
+						 <img class="logo_header" src="<?php echo bloginfo('template_url'); ?>/assets/images/logo_w.png" alt="Sale Caravana Logo">
+						 <img class="logo_header hide" src="<?php echo bloginfo('template_url'); ?>/assets/images/logo_b.png" alt="Sale Caravana Logo">
+						 <p>Sale Caravana</p> 
+					
+				</h1>
+				</a>
+
+			<?php }else{ ?>
+				
+				<a class="a_h" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<h1>
+					
+						 <img class="logo_header" src="<?php echo bloginfo('template_url'); ?>/assets/images/logo_b.png" alt="Sale Caravana Logo">
+						 <p>Sale Caravana</p> 
+					
+				</h1>
+				</a>
+
+			<?php } ?>
 
 			<div class="button_container" id="toggle">
 				<span class="top"></span>
@@ -44,20 +79,106 @@
 			</div>
 
 			<div class="overlay" id="overlay">
-			<nav class="overlay-menu">
+				<nav class="overlay-menu">
 
-					<?php 
-							wp_nav_menu( array(    	 
-				  		  'container'       => '',
-						  'container_class' => false,
-						  'container_id'    => false,
-						  'menu_class'      => false,
-						  'menu_id'         => false,
-						  'theme_location' => 'header-menu' ) );
-				  ?> 
-				  <?php dynamic_sidebar('footer_widget'); ?>
+						<?php 
+								wp_nav_menu( 
+									array(    	 
+							  		  'container'       => '',
+									  'container_class' => false,
+									  'container_id'    => false,
+									  'menu_class'      => false,
+									  'menu_id'         => false,
+									  'theme_location' => 'header-menu' ) 
+								);
+					  			
+					  			dynamic_sidebar('footer_widget'); 
+					  	?>
 
-			</nav>
+				</nav>
 			</div>
-
 		</header>
+
+		<?php
+
+		      	if ($current_page == 'Posts' || $current_page == 'Relatos'):
+
+		            $args_term = array(
+		              'orderby'           => 'date', 
+		              'order'             => 'DESC'
+		            ); 
+
+		            $terms = get_terms('category', $args_term);
+            ?>
+            <div class="category-wrapper">
+            	<div class="categories" >
+            	<!-- <div class="scrollable"> -->
+		            <div class=" mm-item">Categories
+		            	
+		            	<div class="dd-menu">
+			
+			<?php
+		            foreach ($terms as $key):
+		    ?>
+			  		 <a href="#" class="ajax_token" data-token="<?php  echo $key->slug; ?>"><?php  echo $key->name; ?></a>
+					         
+
+			      <?php endforeach; ?>
+
+					          
+	              	<a href="#" class="ajax_token dd-item" data-token="">
+		                All
+	                </a>
+					         
+								</div>
+							</div>
+						<!-- </div> -->
+					</div>
+</div>
+				<?php endif; ?>
+
+
+<?php
+
+  	$current_page = $post->post_name;
+
+  	if ($current_page == 'posts' || $current_page == 'relatos'):  // Categories 
+
+        $args_term = array(
+          'orderby'           => 'date', 
+          'order'             => 'DESC'
+        ); 
+
+        $terms = get_terms('category', $args_term);
+?>				
+
+<div class="categories">
+	<nav class="navbar navbar-inverse categories">
+	
+	  <div class="navbar-header">
+	    <a data-toggle="collapse" data-target=".navbar-collapse" href="#">Categories<span class="caret"></span></a>
+	   </div>
+	
+	  <div class="navbar-collapse collapse">
+	   
+	    <ul class="nav navbar-nav">
+	     
+	      <?php foreach ($terms as $key):  ?>
+
+	    	  <li><a href="#" class="ajax_token" data-toggle="collapse" data-target=".navbar-collapse" data-token="<?php  echo $key->slug; ?>"><?php  echo $key->name; ?></a></li>
+
+	      <?php endforeach; ?>
+
+	      	  <li class="too"><a href="#" class="ajax_token dd-item" data-toggle="collapse" data-target=".navbar-collapse" data-token="">All</a></li>
+
+	    </ul>
+
+
+	  </div>
+
+	</nav>
+
+</div>
+
+<?php endif; ?>
+		

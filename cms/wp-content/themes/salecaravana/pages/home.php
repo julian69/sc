@@ -94,7 +94,7 @@
                                
                                       <p><?php echo date("dS F Y", strtotime(get_field('date'))); ?></p>
                                  </h3>
-                                 <a href="<?php echo get_permalink(); ?>" class="btn">LEER MAS</a>
+                                 <a href="<?php echo get_permalink(); ?>" class="btn">VIEW MORE</a>
                             </div>
 
                           </div>
