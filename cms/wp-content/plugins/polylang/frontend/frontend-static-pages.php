@@ -171,7 +171,10 @@ class PLL_Frontend_Static_Pages extends PLL_Static_Pages {
 	 * @return bool|string
 	 */
 	public function pll_check_canonical_url( $redirect_url ) {
-		return $this->options['redirect_lang'] && isset( $this->curlang->page_on_front ) && is_page( $this->curlang->page_on_front ) ? false : $redirect_url;
+		if ( ! empty( $this->curlang->page_on_front ) && is_page( $this->curlang->page_on_front ) ) {
+			return $this->options['redirect_lang'] ? false : $this->curlang->home_url;
+		}
+		return $redirect_url;
 	}
 
 	/*

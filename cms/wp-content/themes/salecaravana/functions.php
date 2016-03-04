@@ -31,29 +31,13 @@ if (function_exists('add_theme_support'))
     add_image_size('medium', 250, '', true); // Medium Thumbnail
     add_image_size('small', 120, '', true); // Small Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
-     add_image_size('slideshow_home', 1920, 1055, true);
-    // Add Support for Custom Backgrounds - Uncomment below if you're going to use
-    /*add_theme_support('custom-background', array(
-	'default-color' => 'FFF',
-	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
-    ));*/
+    add_image_size('slideshow_home', 1920, 1055, true);
 
-    // Add Support for Custom Header - Uncomment below if you're going to use
-    /*add_theme_support('custom-header', array(
-	'default-image'			=> get_template_directory_uri() . '/img/headers/default.jpg',
-	'header-text'			=> false,
-	'default-text-color'		=> '000',
-	'width'				=> 1000,
-	'height'			=> 198,
-	'random-default'		=> false,
-	'wp-head-callback'		=> $wphead_cb,
-	'admin-head-callback'		=> $adminhead_cb,
-	'admin-preview-callback'	=> $adminpreview_cb
-    ));*/
+    add_image_size('entries_list', 800, 600, true);
 
     // Enables post and comment RSS feed links to head
     add_theme_support('automatic-feed-links');
-
+    
     // Localisation Support
     load_theme_textdomain('html5blank', get_template_directory() . '/languages');
 }
@@ -480,7 +464,7 @@ function entries_post_type()
     register_post_type('entries', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('Entries', 'entries'), // Rename these to suit
+            'name' => __('entries', 'entries'), // Rename these to suit
             'singular_name' => __('entries', 'entries'),
             'add_new' => __('Add New', 'entries'),
             'add_new_item' => __('Add New entries', 'entries'),
@@ -552,5 +536,7 @@ function sc_menus() {
   );
 }
 add_action( 'init', 'sc_menus' );
+
+
 
 ?>

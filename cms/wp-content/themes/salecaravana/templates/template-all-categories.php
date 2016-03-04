@@ -16,7 +16,6 @@
 
             foreach ($terms as $term):
                 $image_category = get_field('category_image',$term);
-                 // var_dump($term);
         ?>
                
 
@@ -32,7 +31,8 @@
                                
                                       <p><?php //echo date("dS F Y", strtotime(get_field('date'))); ?></p>
                                  </h3>
-                                 <a href="<?php echo $term->slug; ?>" class="btn">LEER MAS</a>
+                                  <a href="<?php echo get_permalink(); ?>" class="btn">LEER MAS</a>
+                                 <!-- <a href="<?php// echo $term->slug; ?>" class="btn">LEER MAS</a> -->
                             </div>
                           </div>
 

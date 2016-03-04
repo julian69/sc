@@ -4,7 +4,6 @@
 */
 
     get_header();
-    // var_dump($fields); exit;
 ?>
 
 <main class="index-template">
@@ -112,14 +111,31 @@
       <div class="container">
         <div class="row">
 
-        <?php foreach ($fields['redirections'] as $key): ?>
+        <?php 
+          $i = 0;
+          foreach ($fields['redirections'] as $key): 
+
+            if ($i == 0) {
+               $svg = 'mundo';
+            }elseif ($i == 1) {
+               $svg = 'mundo';
+            }elseif ($i == 2) {
+               $svg = 'perro';
+            }
+           
+
+        ?>
          
             <div class="col-sxs-12 col-md-4">
-             <a href="<?php echo $key['link']; ?>"><img src="<?php echo bloginfo('template_url'); ?>/assets/images/mundo.svg" alt=""></a> 
-                <span class="col-md-12" ><?php echo $key['content']; ?></span>
+              <a href="<?php echo $key['link']; ?>">
+                 <img src="<?php echo bloginfo('template_url').'/assets/images/'.$svg.'.svg'; ?>" alt="<?php echo 'Icon '.$svg;?>">
+              </a> 
+              <span class="col-md-12" ><?php echo $key['content']; ?></span>
             </div>
 
-         <?php endforeach; ?>
+         <?php 
+            $i++;
+            endforeach; ?>
             
         </div>
       </div>

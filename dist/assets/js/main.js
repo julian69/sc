@@ -120,9 +120,9 @@ var common = {
 			    $('html,body').animate({scrollTop:$(this.hash).offset().top - 150}, 1000);
 			});
 
-			var home_header_bg = $('.home #header-bg');
-			var site_header = $('.home #site-header');
-			var logo_header = $('.home .logo_header');
+			var home_header_bg = $('.home #header-bg, .single #header-bg');
+			var site_header = $('.home #site-header, .single #site-header');
+			var logo_header = $('.home .logo_header, .single .logo_header');
 
 			$(function(){
 			    home_header_bg.data('size','big');
@@ -210,7 +210,7 @@ var common = {
 
 		    if ( _opened === true && !clickover.hasClass("navbar-toggle")  ) {      
 		        $navbar.collapse('hide');
-		        console.log($(this));
+		        // console.log($(this));
 		    }
 		});
 

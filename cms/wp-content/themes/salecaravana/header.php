@@ -47,7 +47,7 @@
 
 		      	$current_page = $post->post_title;
 
-		      	if ($current_page == 'Home'){  
+		      	if ($current_page == 'Home' || get_post_type() == 'entries'){  
             ?>
 				<a class="a_h" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<h1>
@@ -99,48 +99,10 @@
 			</div>
 		</header>
 
-		<?php
-
-		      	if ($current_page == 'Posts' || $current_page == 'Relatos'):
-
-		            $args_term = array(
-		              'orderby'           => 'date', 
-		              'order'             => 'DESC'
-		            ); 
-
-		            $terms = get_terms('category', $args_term);
-            ?>
-            <div class="category-wrapper">
-            	<div class="categories" >
-            	<!-- <div class="scrollable"> -->
-		            <div class=" mm-item">Categories
-		            	
-		            	<div class="dd-menu">
-			
-			<?php
-		            foreach ($terms as $key):
-		    ?>
-			  		 <a href="#" class="ajax_token" data-token="<?php  echo $key->slug; ?>"><?php  echo $key->name; ?></a>
-					         
-
-			      <?php endforeach; ?>
-
-					          
-	              	<a href="#" class="ajax_token dd-item" data-token="">
-		                All
-	                </a>
-					         
-								</div>
-							</div>
-						<!-- </div> -->
-					</div>
-</div>
-				<?php endif; ?>
-
-
 <?php
 
   	$current_page = $post->post_name;
+  	// var_dump($current_page);
 
   	if ($current_page == 'posts' || $current_page == 'relatos'):  // Categories 
 
@@ -169,7 +131,7 @@
 
 	      <?php endforeach; ?>
 
-	      	  <li class="too"><a href="#" class="ajax_token dd-item" data-toggle="collapse" data-target=".navbar-collapse" data-token="">All</a></li>
+	      	  <li class="too"><a href="#" class="ajax_token" data-toggle="collapse" data-target=".navbar-collapse" data-token="">All</a></li>
 
 	    </ul>
 
@@ -177,7 +139,6 @@
 	  </div>
 
 	</nav>
-
 </div>
 
 <?php endif; ?>

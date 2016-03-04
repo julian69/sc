@@ -22,8 +22,8 @@
 					<ul class="social">
 						
 						<li class="icon-circle">
-							<a href="#" target="blank">
-				    	 		<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
+							<a href="https://www.facebook.com/salecaravana/" target="blank">
+				    	 		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve">
 									<g>
 										<g>
 											<path fill="ffffff" d="M612,306C612,137.004,474.995,0,306,0C137.004,0,0,137.004,0,306c0,168.995,137.004,306,306,306
@@ -58,8 +58,8 @@
 						</li>
 			    	 	
 			    	 	<li class="icon-circle">
-			    	 		<a href="#" target="blank">
-			    	 		<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			    	 		<a href="https://www.flickr.com/cameraroll" target="blank">
+			    	 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 									viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 								<g>
 									<g>
@@ -96,8 +96,8 @@
 			    	 	</li>
 
 			    	 	<li class="icon-circle">
-			    	 		<a href="#" target="blank">
-			    	 		<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 97.752 97.752" style="enable-background:new 0 0 97.752 97.752;"
+			    	 		<a href="https://www.couchsurfing.com/people/mistlav" target="blank">
+			    	 		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 97.752 97.752" style="enable-background:new 0 0 97.752 97.752;"
 									 xml:space="preserve">
 								<g>
 									<g>
